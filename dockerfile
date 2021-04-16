@@ -1,8 +1,6 @@
 FROM ubuntu
-COPY ProgIntel.cpp .
+COPY SubProg.py .
+COPY MainProg.py .
 RUN apt update
-RUN apt install nano -y
-RUN apt install gcc -y
-RUN apt-get install gcc-multilib g++-multilib -y
-RUN apt install libc6-dev-i386 -y
-RUN g++ -m32 -masm=intel ProgIntel.cpp -o ProgIntel
+RUN apt-get install nano -y
+RUN apt-get install python3 -y
